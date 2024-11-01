@@ -105,8 +105,8 @@ st.plotly_chart(fig)
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    fig = px.histogram(top, x="danceability_%", color="energy_%", nbins=50, title="Distribuição de Danceability e Energy")
-    fig.update_layout(xaxis_title="Danceability", yaxis_title="Energy", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)})
+    fig = px.histogram(top, x="danceability_%", color="energy_%", nbins=50, title=f"Relação entre energia e danceabilidade)")
+    fig.update_layout(xaxis_title="Danceability", yaxis_title="Energy")
     st.plotly_chart(fig)
     
 with col2:
