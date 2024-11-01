@@ -106,7 +106,7 @@ col1, col2 = st.columns([1, 1])
 
 with col1:
     fig = px.pie(top.assign(grupo=top["danceability_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Gêneros de Músicas Dançantes")
-    fig.update_traces(textposition='inside', textinfo='label+percentual')
+    fig.update_traces(textposition='inside', textinfo='label+value')
     st.plotly_chart(fig)
     
     fig = px.pie(top.assign(grupo=top["energy_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Gêneros de Músicas Dançantes")
