@@ -55,7 +55,11 @@ artista = st.sidebar.multiselect("Selecione o(s) artista(s)", df_expanded["artis
 
 #region Filtros na base de dados
 top = df
-top = df[df['artist(s)_name'].apply(lambda x: any(art in x for art in artista))]
+if artista:
+  top = df[df['artist(s)_name'].apply(lambda x: any(art in x for art in artista))]
+else:
+  top=df
+
 top = top.nlargest(10, 'streams')
 top['streams'] = top['streams'].apply(lambda x: f'{x:,.2f}')
 
