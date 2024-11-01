@@ -105,17 +105,17 @@ st.plotly_chart(fig)
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    fig = px.pie(df.assign(grupo=top["danceability_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Gêneros de Músicas Dançantes")
+    fig = px.pie(df.assign(grupo=df["danceability_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Gêneros de Músicas Dançantes")
     st.plotly_chart(fig)
     
-    fig = px.pie(df.assign(grupo=top["energy_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Gêneros de Músicas Dançantes")
+    fig = px.pie(df.assign(grupo=df["energy_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Gêneros de Músicas Dançantes")
     st.plotly_chart(fig)
     
 with col2:
-    fig = px.pie(df.assign(grupo=top["acousticness_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Trecho de Instrumental na música")
+    fig = px.pie(df.assign(grupo=df["acousticness_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Trecho de Instrumental na música")
     st.plotly_chart(fig)
     
-    fig = px.pie(df.assign(grupo=top["bpm"] // 10 * 10), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="BPM da Música")
+    fig = px.pie(df.assign(grupo=df["bpm"] // 10 * 10), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="BPM da Música")
     st.plotly_chart(fig)
 #endregion
 
