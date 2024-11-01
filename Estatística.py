@@ -105,7 +105,7 @@ st.plotly_chart(fig)
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    fig = px.scatter(top, x="danceability_%", y="energy_%", title=f"Relação entre energia e danceabilidade")
+    fig = px.scatter(df, x="danceability_%", y="energy_%", title=f"Relação entre energia e danceabilidade")
     fig.update_layout(xaxis_title="Danceability", yaxis_title="Energy")
     st.plotly_chart(fig)
     
