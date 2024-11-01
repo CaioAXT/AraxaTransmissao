@@ -121,7 +121,7 @@ with col2:
 
 
 #region Histograma
-fig = px.histogram(top, x="bpm", nbins=20, title=f"Histograma de Streams de {ano_selecionado} ({mes_inicio} até {mes_fim})")
+fig = px.histogram(df, x="bpm", nbins=20, title=f"Histograma de Streams de {ano_selecionado} ({mes_inicio} até {mes_fim})")
 st.plotly_chart(fig)
 #endregion
 
