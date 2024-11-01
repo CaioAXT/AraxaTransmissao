@@ -38,7 +38,7 @@ df_expanded = df_expanded[["artist_name"]].sort_values("artist_name")
 #endregion
 
 #region Barra Lateral
-st.sidebar.image("C:\\Users\\caio.alves\\Downloads\\Logo_IFSC_ParaVideoaula-1024x1024.png",width=200)
+st.sidebar.image("Logo_IFSC_ParaVideoaula-1024x1024.png",width=200)
 ano_selecionado = st.sidebar.slider("Selecione o ano de lançamento",min_value=min(anos_disponiveis),
                                                                     max_value=max(anos_disponiveis), 
                                                                     value=(min(anos_disponiveis), 
