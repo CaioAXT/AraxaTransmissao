@@ -14,7 +14,7 @@ app = dash.Dash(__name__,external_stylesheets=[dbc.themes.LUX])
 #endregion
 
 #region Definir Base de Dados
-df = pd.read_csv("C:\\Users\\caio.alves\\Downloads\\archive\\Spotify Most Streamed Songs.csv", sep=',', encoding='latin-1')
+df = pd.read_csv("Spotify Most Streamed Songs.csv", sep=',', encoding='latin-1')
 df = df.drop(index=0)
 df['streams'] = pd.to_numeric(df['streams'], errors='coerce')
 df["released_year"] = pd.to_numeric(df["released_year"], errors='coerce')
