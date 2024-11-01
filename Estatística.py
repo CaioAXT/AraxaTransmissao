@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 #endregion
 
 #region Definir Configurações de página
-st.set_page_config(layout="wide", page_title="Trabalho de Estatística", page_icon="📊", theme="light")
+st.set_page_config(layout="wide", page_title="Trabalho de Estatística", page_icon="📊", )
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.LUX])
 #endregion
 
