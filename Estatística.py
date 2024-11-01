@@ -129,3 +129,18 @@ st.plotly_chart(fig)
 '''Top 10 músicas mais ouvidas'''
 st.table(top[["track_name", "artist(s)_name", "streams"]])
 #endregion
+
+codigo_markdown = """
+```python
+#region Bibliotecas
+import streamlit as st
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import dash
+import dash_bootstrap_components as dbc
+import plotly.graph_objects as go
+#endregion
+"""
+
+st.markdown(codigo_markdown)
