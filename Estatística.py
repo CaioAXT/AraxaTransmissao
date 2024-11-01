@@ -119,8 +119,13 @@ with col2:
     st.plotly_chart(fig)
 #endregion
 
+
+#region Histograma
+fig = px.histogram(top, x="bpm", nbins=20, title=f"Histograma de Streams de {ano_selecionado} ({mes_inicio} até {mes_fim})")
+st.plotly_chart(fig)
+#endregion
+
 #region Tabela Top 10 Músicas 
 '''Top 10 músicas mais ouvidas'''
 st.table(top[["track_name", "artist(s)_name", "streams"]])
 #endregion
-
