@@ -47,7 +47,7 @@ ano_selecionado = st.sidebar.slider("Selecione o ano de lançamento",min_value=m
 mes_inicio, mes_fim = st.sidebar.slider(
     "Selecione o mês de lançamento",
     min_value=1, max_value=12,
-    value=(1, 7),
+    value=(1, 12),
     format="Mês %d"
 )
 artista = st.sidebar.multiselect("Selecione o(s) artista(s)", df_expanded["artist_name"].unique())
