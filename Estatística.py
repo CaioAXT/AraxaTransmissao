@@ -101,7 +101,7 @@ fig.update_layout(xaxis_title="Mês", yaxis_title="Streams")
 st.plotly_chart(fig)
 #endregion
 
-fig = px.scatter(top, x="danceability_%", y="energy_%", title=f"Relação entre energia e danceabilidade")
+fig = px.scatter(df, x="danceability_%", y="energy_%", title=f"Relação entre energia e danceabilidade")
 fig.update_layout(xaxis_title="Danceability", yaxis_title="Energy")
 st.plotly_chart(fig)
 
