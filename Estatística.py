@@ -122,7 +122,7 @@ with col2:
 fig = px.histogram(df, x="bpm", nbins=20, title=f"Histograma de BPM das músicas analisadas")
 st.plotly_chart(fig)
 
-fig = px.histogram(df, x="streams", nbins=20, title=f"Histograma de BPM das músicas analisadas")
+fig = px.histogram(df, x="streams", nbins=20, title=f"Streams das músicas analisadas")
 st.plotly_chart(fig)
 #endregion
 
