@@ -77,7 +77,6 @@ st.title("Trabalho de Estatística")
 st.subheader("Músicas mais famosas nos serviços de streaming")
 
 """Essa base de dados foi retirada de https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs"""
-"""Vídeo de Explicação: https://www.kaggle.com/code/abdulszz/spotify-most-streamed-songs/notebook"""
 '''Este conjunto de dados contém informações abrangentes sobre algumas das músicas mais transmitidas no Spotify, enriquecidas com informações adicionais de outras plataformas populares de streaming, como Apple Music, Deezer e Shazam. Sendo um apaixonado por programação e um entusiasta de aprendizado de máquina, foi uma ótima experiência realizar esse trabalho.'''
 
 #region Grafico Top 10 musicas mais ouvidas
@@ -211,7 +210,6 @@ st.title("Trabalho de Estatística")
 st.subheader("Músicas mais famosas nos serviços de streaming")
 
 '''Essa base de dados foi retirada de https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs'''
-'''Vídeo de Explicação: https://www.kaggle.com/code/abdulszz/spotify-most-streamed-songs/notebook'''
 '''Este conjunto de dados contém informações abrangentes sobre algumas das músicas mais transmitidas no Spotify, enriquecidas com informações adicionais de outras plataformas populares de streaming, como Apple Music, Deezer e Shazam. Sendo um apaixonado por programação e um entusiasta de aprendizado de máquina, foi uma ótima experiência realizar esse trabalho.'''
 
 #region Grafico Top 10 musicas mais ouvidas
