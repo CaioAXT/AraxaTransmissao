@@ -77,6 +77,7 @@ st.title("Trabalho de Estatística")
 st.subheader("Músicas mais famosas nos serviços de streaming")
 
 """Essa base de dados foi retirada de https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs"""
+"""Vídeo de Explicação: https://www.kaggle.com/code/abdulszz/spotify-most-streamed-songs/notebook"""
 '''Este conjunto de dados contém informações abrangentes sobre algumas das músicas mais transmitidas no Spotify, enriquecidas com informações adicionais de outras plataformas populares de streaming, como Apple Music, Deezer e Shazam. Sendo um apaixonado por programação e um entusiasta de aprendizado de máquina, foi uma ótima experiência realizar esse trabalho.'''
 
 #region Grafico Top 10 musicas mais ouvidas
@@ -100,7 +101,7 @@ fig.update_layout(xaxis_title="Mês", yaxis_title="Streams")
 st.plotly_chart(fig)
 #endregion
 
-fig = px.scatter(df, x="danceability_%", y="energy_%", title=f"Relação entre energia e danceabilidade")
+fig = px.scatter(top, x="danceability_%", y="energy_%", title=f"Relação entre energia e danceabilidade")
 fig.update_layout(xaxis_title="Danceability", yaxis_title="Energy")
 st.plotly_chart(fig)
 
@@ -119,6 +120,9 @@ with col2:
 
 #region Histograma
 fig = px.histogram(df, x="bpm", nbins=20, title=f"Histograma de BPM das músicas analisadas")
+st.plotly_chart(fig)
+
+fig = px.histogram(df, x="streams", nbins=20, title=f"Histograma de BPM das músicas analisadas")
 st.plotly_chart(fig)
 #endregion
 
@@ -210,6 +214,7 @@ st.title("Trabalho de Estatística")
 st.subheader("Músicas mais famosas nos serviços de streaming")
 
 '''Essa base de dados foi retirada de https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs'''
+'''Vídeo de Explicação: https://www.kaggle.com/code/abdulszz/spotify-most-streamed-songs/notebook'''
 '''Este conjunto de dados contém informações abrangentes sobre algumas das músicas mais transmitidas no Spotify, enriquecidas com informações adicionais de outras plataformas populares de streaming, como Apple Music, Deezer e Shazam. Sendo um apaixonado por programação e um entusiasta de aprendizado de máquina, foi uma ótima experiência realizar esse trabalho.'''
 
 #region Grafico Top 10 musicas mais ouvidas
