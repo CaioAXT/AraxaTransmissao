@@ -101,17 +101,18 @@ fig.update_layout(xaxis_title="Mês", yaxis_title="Streams")
 st.plotly_chart(fig)
 #endregion
 
+fig = px.scatter(top, x="danceability_%", y="energy_%", title=f"Relação entre energia e danceabilidade")
+fig.update_layout(xaxis_title="Danceability", yaxis_title="Energy")
+st.plotly_chart(fig)
+
 #region Gráficos de Pizza
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    fig = px.scatter(df, x="danceability_%", y="energy_%", title=f"Relação entre energia e danceabilidade")
-    fig.update_layout(xaxis_title="Danceability", yaxis_title="Energy")
+    fig = px.pie(top.assign(grupo=top["acousticness_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Trecho de Instrumental na música")
     st.plotly_chart(fig)
     
 with col2:
-    fig = px.pie(top.assign(grupo=top["acousticness_%"] // 5 * 5), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="Trecho de Instrumental na música")
-    st.plotly_chart(fig)
     
     fig = px.pie(top.assign(grupo=top["bpm"] // 10 * 10), names="grupo", color="grupo", color_discrete_map={i:f"rgba({i},{i},{i},{i/100*255})" for i in range(0, 101, 5)}, title="BPM da Música")
     st.plotly_chart(fig)
